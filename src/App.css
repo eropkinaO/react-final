@@ -1,0 +1,17 @@
+nav{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #826F66;
+}
+
+.link{
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+} 
+
+.database{
+  margin: auto;
+} 
