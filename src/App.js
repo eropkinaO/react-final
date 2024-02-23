@@ -15,14 +15,15 @@ import MyFilmComponent from './MyFilmComponent';
 
 function App() {
    const [mySearch, setMySearch] = useState("");
-   const [myFilm, setMyFilm] = useState([]);
+   const [myFilm, setMyFilm] = useState();
+
 
    useEffect(() => {
   const getFilm = async () => {
     const response = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=78d306d8");
     const data = await response.json();
-    console.log(data);
-    setMyFilm(data);
+    console.log(data.Title);
+    setMyFilm(data.Title);
   }
   getFilm()
 }, [])
@@ -65,10 +66,11 @@ const myFilmSearch = (e) => {
      </div>
       
       <div>
-      {myFilm.map((element, index) => (
-        <MyFilmComponent  key={index}
-        title={element.Title}
-        genre={element.Genre}/>
+      {myFilm && Object.values(myFilm).map(({Title, Genre, Year}, index) => (
+        <MyFilmComponent key={index}
+        title={Title}
+        genre={Genre}
+        year={Year}/>
       ))}
       </div>
     </section>
