@@ -1,13 +1,270 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+nav{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #7E6363;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.link{
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+} 
+
+h2{
+  font-family: "Rubik", sans-serif;
+  color: #FFE3D8;
+}
+
+.database{
+  margin: auto;
+} 
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search{
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  background-color: #F0ECE3;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 0px 0px 4px #4B6587;
+  border: none;
+  font-family: "Rubik", sans-serif;
+}
+
+li{
+  list-style-image: url(iconDone.png);
+  font-weight: bold;
+  font-size: larger;
+  font-family: "Rubik", sans-serif;
+}
+
+.url{
+   color: #0D1282;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.description{
+   padding-top: 30px;
+   padding-left: 70px;
+   padding-right: 70px;
+}
+
+table, th, td {
+  border:1px solid black;
+  font-family: "Rubik", sans-serif;;
+}
+
+td{
+  padding: 7px;
+}
+
+.button-add{
+  font-family: "Rubik", sans-serif;
+  padding: 13px;
+  background-color: #8DDFCB;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: #9376E0 2px solid;
+  font-size: 17px;
+  color: #610C9F;
+  cursor: pointer;
+}
+
+.button-delete{
+  font-family: "Rubik", sans-serif;
+  padding: 7px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: #9376E0 2px solid;
+  font-size: 10px;
+  color: #610C9F;
+}
+
+h3{
+  font-family: "Rubik", sans-serif;
+  background-color: #9DB2BF;
+  padding: 17px;
+  color: #F0ECE3;
+  border-radius: 15px;
+}
+
+.App{
+  display: flex;
+  justify-content: space-around;
+}
+
+.whole-plan{
+  width: 70%;
+  height: 100vh;
+}
+
+.myInput{
+  width: 70%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  margin-top: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+textarea{
+  display: block;
+  border: 1px solid;
+  margin-top: 30px;
+  width: 70%;
+  height: 170px;
+  border-radius: 20px;
+  font-family: "Rubik", sans-serif;
+  padding: 15px;
+  background-color: #DDE6ED;
+  border: none;
+}
+
+.goalSelected{
+  background-color: #F1EBBB;
+}
+
+.nonSelected{
+  background-color: #827397;
+}
+
+.title{
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.field{
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+.searchNews{
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  border-color: #5A639C;
+}
+
+.agenda{
+  color: #5A639C;
+}
+
+.table{
+  background-color: #C683D7;
+  color: #F3EDC8;
+  font-family: "Rubik", sans-serif;
+}
+
+.changeColor{
+  background-color: #5A639C;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  color: #FFF5E0;
+  font-size: 15px;
+}
+
+.plan{
+  color: #5A639C;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.myPlan{
+  
+  width: 30%;
+  padding: 8px;
+  background-color: transparent;
+  color: #5A639C;
+  box-shadow: inset 0px 0px 0px 4px #8B93FF;
+}
+
+.planning{
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: #141E46;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.list{
+  word-break: break-all;
+  width: 80%;
+}
+
+@media all and (max-width: 500px) {
+
+ nav{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+ }
+  
+ .agenda{
+ font-size: 18px;
+}
+
+.photoPlan{
+  width: 70%;
+}
+
+.planning{
+  margin-left: 25px;
+}
+
+.plan{
+  font-size: 15px;
+}
+
+.button-add{
+   padding: 10px;
+   font-size: 12px;
+}
+
+textarea{
+  width: 50%;
+  height: 130px;
+  margin-left: 30px;
+}
+
+.myInput{
+  margin-left: 15px;
+}
+
+.planAdd{
+  margin-left: 20px;
+}
+
+h3{
+  width: 60%;
+  margin-left: 50px;
+}
+
+.list{
+  word-break: break-all;
+  width: 80%;
+}
+
+li{
+  list-style-image:none
+}
+
+.newsImage{
+   width: 80%;
+}
 }

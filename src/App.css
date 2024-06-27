@@ -1,17 +1,12 @@
-nav{
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  background-color: #826F66;
+
+body{
+  background-size: cover;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-color: #FDF0D1;
 }
 
-.link{
-  padding: 10px 30px;
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: uppercase;
-} 
 
-.database{
-  margin: auto;
-} 
+
+
+
