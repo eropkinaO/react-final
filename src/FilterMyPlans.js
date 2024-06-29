@@ -9,9 +9,7 @@ const FilterMyPlans = () => {
   const [search, setSearch] = useState("");
   const inputRef = useRef();
 
-  const focus = () => {
-    inputRef.current.focus()
-} 
+
 
 
     const handleText = (e) => {
@@ -27,10 +25,6 @@ const FilterMyPlans = () => {
         return PlansFilter.item.toLowerCase().includes(search.toLowerCase());
         }), [search])
 
-        const finalSearch = (e) => {
-            e.preventDefault()
-            setSearch(search)
-        }
 
     return(
         <div className="container">
