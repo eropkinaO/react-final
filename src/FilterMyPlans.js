@@ -9,14 +9,16 @@ const FilterMyPlans = () => {
   const [search, setSearch] = useState("");
   const inputRef = useRef();
 
-
+  const focus = () => {
+    inputRef.current.focus()
+} 
 
 
     const handleText = (e) => {
         setText(e.target.value)
     }  
 
-    const handleSearch = () => {
+    const handleSearch = (e) => {
         setSearch(text);
     }
 
@@ -25,12 +27,16 @@ const FilterMyPlans = () => {
         return PlansFilter.item.toLowerCase().includes(search.toLowerCase());
         }), [search])
 
+        const finalSearch = (e) => {
+            e.preventDefault()
+            setSearch(search)
+        }
 
     return(
         <div className="container">
              <p className="plan">My plans today is {text}</p>
-            <input className="myPlan" ref={inputRef} type="text" onChange={handleText}  value={text}/>
-        <button className="changeColor" type="button" onClick={handleSearch}>Search</button>
+            <input className="myPlan" ref={inputRef} type="text" onClick={focus} onChange={handleText}  value={text}/>
+        <button className="changeColor" type="button" onChange={finalSearch} onClick={handleSearch}>Search</button>
         <div>
             {filteredPlans.map((filteredPlan) => (
                 <div className="container">
