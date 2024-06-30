@@ -71,7 +71,7 @@ const Home = () => {
       
       <div className='list'>
        { 
-       myNews.map((element, index)  => (
+       myNews && myNews.map((element, index)  => (
         <MyNewsComponent key={index}
         author={element.author}
         urlToImage = {element.urlToImage}
